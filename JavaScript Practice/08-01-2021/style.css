@@ -1,0 +1,17 @@
+img    /*Set Image Height & Width*/
+{
+	width: 215px;
+	height: 315px; 
+}
+.inline-block /*Set Image Into Oneline */
+{
+	display: inline-block;
+	background-color: yellow;
+	margin-right: 1%;
+}
+.maindiv /*Give margin for proper visible in center*/
+{
+	margin-top: 4%;
+	margin-left: 16%;
+	margin-right: 16.7%;
+}
