@@ -1,0 +1,31 @@
+.inline-block /*Set Image Into Oneline */
+{
+	display: inline-block;
+}
+.block-section
+{
+	background-color: black;
+	margin-right: 1%;
+	width: 215px;
+	height: 315px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+.maindiv /*Give margin for proper visible in center*/
+{
+	margin-top: 10%;
+	text-align: center;
+}
+.paragraph
+{
+	text-align: center;
+	display: block;
+	background-color: lightgrey;
+	color: darkgrey;
+}
+.paragraph1
+{
+	margin : 1% 19% 0;
+}
