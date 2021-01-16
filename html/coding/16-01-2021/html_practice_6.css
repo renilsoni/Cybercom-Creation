@@ -1,0 +1,74 @@
+.main
+{
+	margin : 80px 450px 0px 450px;
+	position: relative;
+}
+
+img
+{
+	height: 100px;
+	width: 450px;
+}
+.inputfield
+{
+	border: 1px solid lightgrey;
+	margin : 15px 50px 5px 50px;
+	border-radius: 2px;
+	display: flex;
+}
+
+i
+{
+	margin-left: 5px;
+	margin-top: 12px;
+}
+
+input
+{
+	margin: 10px 5px 10px 10px;
+	border : 0;
+	height: 20px;
+	width: 100%;
+	padding: 1px;
+}
+.textarea
+{
+	border: 1px solid lightgrey;
+	margin : 15px 50px 5px 50px;
+	border-radius: 2px;
+	display: flex;
+}
+.texta
+{
+	margin: 3px 1px 1px 10px;
+	border : 0px;
+	height: 70px;
+	width: 280px;
+}
+button
+{
+	background-color: purple;
+	border: none;
+	color: white;
+	padding: 13px 28px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 13px; 
+	margin-top: 20px;
+	margin-left: 165px;
+	border-radius: 25px;
+	box-shadow: 2px 2px 5px 2px #888888;
+  	font-family: Helvetica, sans-serif;
+}
+.centered
+{
+	position: absolute;
+  	top: 11%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	font-size: 20px;
+  	color: white;
+  	font: 28px bold;
+  	font-family: Helvetica, sans-serif;
+}
