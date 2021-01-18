@@ -30,10 +30,16 @@
 					<i class="fa fa-comment-o fa-lg"></i>
 					<textarea class="texta" placeholder="Your Comments..."></textarea>
 				</section>
-				<button>SEND NOW</button>
+				<button id="sendnow">SEND NOW</button>
 			</form>
 		</div>
 	</div>
 
 </body>
+<script type="text/javascript">
+	document.getElementById('sendnow').addEventListener('click',function()
+	{
+		alert('Your request has been submitted !');
+	});
+</script>
 </html>
