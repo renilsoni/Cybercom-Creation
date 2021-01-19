@@ -1,0 +1,35 @@
+.main
+{
+    border: 1px solid black;
+    padding: 0 20px 20px 20px;;
+    margin: 40px 350px 0px 350px;
+}
+.content
+{
+    line-height: 1.6em;
+}
+.content label
+{
+    width: 25%;
+    display: inline-block;
+    text-align: right;
+    margin: 0px 15px 0px 15px;
+}
+.inputwidth
+{
+    width: 35%;
+}
+.selectwidth
+{
+    width: 35%;
+}
+
+.content span
+{
+    margin-left: 190px;
+    color: grey;
+}
+.icon
+{
+    color: blue;
+}
