@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Practice 7</title>
+	<link rel="stylesheet" type="text/css" href="html_practice_7.css">
+</head>
+<body>
+	<form action="submit.html" method="POST">
+		<div class="block">
+			<span>Your Address</span>
+			<div class="content">
+				<div>
+					<label>First Name : </label>
+					<input type="text" name="firstname" id="firstname">
+				</div>
+				<div>
+					<label>Last Name : </label>
+					<input type="text" name="lastname" id="lastname">
+				</div>
+				<div>
+					<label>Street : </label>
+					<input type="text" name="street" id="street">
+				</div>
+				<div>
+					<label>City : </label>
+					<input type="text" name="city" id="city">
+				</div>
+			</div>
+		</div>
+
+		<div class="block">
+			<span>Additional Details</span>
+			<div class="content">
+				<div>
+					<label>Biography : </label>
+					<textarea name="biography" id="biography"></textarea>
+				</div>
+				<div>
+					<label>Image : </label>
+					<input type="file" name="imagepath" id="imagepath">
+				</div>
+				<div>
+					<label>Age Group : </label>
+					<select name="agegroup" id="agegroup">
+						<option value="1">0 to 9 Years</option>
+						<option value="2">10 to 19 Years</option>
+						<option value="3">20 to 29 Years</option>
+						<option value="4">30 to 39 Years</option>
+						<option value="5">40 to 49 Years</option>
+						<option value="6">50 to 59 Years</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div class="block">
+			<span>Interests</span>
+			<div class="content">
+				<div>
+					<label>Hobby : </label>
+					<select name="hobby" id="hobby" multiple size="auto">
+						<option value="cricket">Cricket</option>
+						<option value="swimming">Swimming</option>
+						<option value="reading">Reading</option>
+						<option value="dancing">Dancing</option>
+					</select>
+				</div>
+				<div>
+					<label>Favourite Car?</label>
+					<select name="car" id="car">
+						<option value="bmw">BMW</option>
+						<option value="volvo">Volvo</option>
+						<option value="audi">Audi</option>
+						<option value="swift">Swift</option>
+						<option value="hond">Honda City</option>
+					</select>
+				</div>
+				<div>
+					<label>Favourite Public Transport?</label>
+					<select name="transport" id="transport" multiple size="auto">
+						<optgroup label="Ground">
+							<option>Car</option>
+							<option>Bike</option>
+						</optgroup>
+						<optgroup label="Air">
+							<option>Airoplan</option>
+							<option>Helicopter</option>
+						</optgroup>
+						<optgroup label="Water">
+							<option>Ship</option>
+							<option>Boat</option>
+						</optgroup>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div align="center">
+			<input type="submit" name="submit" value="Submit">
+			<input type="reset" name="reset" value="Reset">
+		</div>
+	</form>
+</body>
+</html>

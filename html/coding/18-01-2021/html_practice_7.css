@@ -1,0 +1,25 @@
+.block
+{
+	width: 100%;  
+    height: auto;
+    border: 1px solid black; 
+    line-height: 0em;
+    margin: 10px 0 20px;  
+}
+.block span
+{
+	background-color: white;
+	padding: 10px;
+	margin: 7px;
+}
+.content
+{
+	margin: 15px 15px 15px;
+	line-height: 1.6em;
+}
+.content label
+{
+	width: 250px;
+	display: inline-block;
+	vertical-align: top;
+}
