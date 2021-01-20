@@ -76,8 +76,7 @@
 
  	// Scoping
 
- 	// * Each new function create new scope, in this scope you can definr variable and accessible for scope only.
-
+   
  	// * Lexical Scoping :- it is function within another function get access to the scope of outer function.
  	var a = 10;
  	abc(); 
@@ -85,13 +84,7 @@
  	function abc()
  	{
  		var b = 25;
- 		console.log(b);
- 		xyz();
- 		function xyz()
- 		{
- 			var c = 25;
- 			pqr();
- 		}
+ 		console.log(b); 
  	}
 
  	function pqr() // its access global variable & its own variable
