@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="dashboard.css">
-    <title>Dashboard</title>
+    <link rel="stylesheet" href="users.css">
+    <title>Users</title>
 </head>
 <body>
     <div>
@@ -17,7 +17,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Dashboard</a>
+                  <a class="nav-link" href="dashboard.html">Dashboard</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="users.html">Users</a>
@@ -35,6 +35,24 @@
     <div id="name" class="text-center name">
 
     </div>
+    <div class="row">
+        <div class="col col-md-12 mt-2 maindiv">
+            <h5>Add User</h5>
+            <div>
+                <form action="#" class="formdiv">&nbsp;
+                    <input type="text" name="name" id="name" placeholder="Name" required> &nbsp; &nbsp; &nbsp;
+                    <input type="email" name="email" id="email"  placeholder="Email" required> &nbsp; &nbsp; &nbsp;
+                    <input type="password" name="password" id="password" placeholder="Password" required> &nbsp; &nbsp; &nbsp;
+                    <input type="date" name="bdate" id="bdate" placeholder="Birth Date" required> &nbsp; &nbsp; &nbsp;
+                    <input type="button" name="adduser" id="adduser" value="Add User" class="btn btn-success btn-md">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="tabledata">
+
+    </div>
 </body>
-<script src="dashboard.js"></script>
+<script src="users.js"></script>
 </html>

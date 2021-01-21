@@ -1,4 +1,4 @@
-
+localStorage.removeItem('logindetail');
 
 document.getElementById('submit').addEventListener('click',()=>
 {
@@ -14,6 +14,7 @@ document.getElementById('submit').addEventListener('click',()=>
         flag = false;
         if(data.email === username && data.password === password)
         {
+            localStorage.setItem('logindetail',JSON.stringify(data.name));
             flag = true;
             break;
         }
