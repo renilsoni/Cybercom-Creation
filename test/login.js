@@ -1,7 +1,7 @@
 
 let adminData =JSON.parse(localStorage.getItem('admin'));
 let userData =JSON.parse(localStorage.getItem('users'));
-console.log(adminData[0].email);
+//console.log(adminData[0].email);
 document.getElementById('submit').addEventListener('click',()=>
 {
     let username = document.getElementById('username').value;

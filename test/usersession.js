@@ -1,4 +1,10 @@
+
+
 let username = JSON.parse(sessionStorage.getItem('loginsession'));
+if(username === null)
+{
+    window.location = 'login.html';
+}
 console.log(username);
 document.getElementById('name').textContent = "Welcome, "+ username.name;
 

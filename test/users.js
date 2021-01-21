@@ -1,11 +1,17 @@
 //its is for login session detail show
 let username = JSON.parse(sessionStorage.getItem('loginsession'));
-console.log(username);
+//console.log(username);
+
+if(username === null)
+{
+    window.location = 'login.html';
+}
+
 document.getElementById('name').textContent = "Welcome, "+ username.name;
 
 let usersArray = [];
-//
 
+// fetch data from localstorage
 if(JSON.parse(localStorage.getItem('users')))
 {
     usersArray = JSON.parse(localStorage.getItem('users'));
@@ -23,9 +29,16 @@ class User
         this.email = email;
         this.password = password;
         this.bdate = bdate;
+        this.calAge(); 
+    }
+     calAge() {
+        this.age =  new Date().getFullYear() - this.bdate.substring(0, 4);
     }
 }
 
+
+
+//add user function
 function addUserData()
 {
     let name = document.getElementById('name').value;
@@ -46,12 +59,14 @@ function addUserData()
     }    
 }
 
+// add button click
 document.getElementById('adduser').addEventListener('click',()=>
 {
     addUserData();  
     showData();
 });
 
+// update button click
 document.getElementById('updateuser').addEventListener('click',() => 
 {
     let newname = document.getElementById('name').value;
@@ -73,6 +88,7 @@ document.getElementById('updateuser').addEventListener('click',() =>
     window.location.reload();
 });
 
+// show data in Tabular format
 function showData()
 {
     let userData = JSON.parse(localStorage.getItem('users'));
@@ -85,14 +101,14 @@ function showData()
         displayData = `${displayData} <tr><th>Name</th><th>Email</th><th>Password</th><th>Birth Date</th><th>Age</th><th>Action</th></tr>`;
         for(const data of userData)
         {
-            displayData = `${displayData} <tr><td>${data.name}</td><td>${data.email}</td><td>${data.password}</td><td>${data.bdate}</td><td>Age</td><td><a href="#" onclick=editUser('${data.name}')>edit</a>&nbsp;<a href="#" onclick=deleteUser('${data.name}')>delete</a></td></tr>`
+            displayData = `${displayData} <tr><td>${data.name}</td><td>${data.email}</td><td>${data.password}</td><td>${data.bdate}</td><td>${data.age}</td><td><a href="#" onclick=editUser('${data.name}')>edit</a>&nbsp;<a href="#" onclick=deleteUser('${data.name}')>delete</a></td></tr>`
         }
         displayData = `${displayData} </table>`;
         document.getElementById('tabledata').innerHTML = displayData;
     }
 }
 
-
+// update user
 function editUser(name)
 {
     document.getElementById('adduser').classList.add('d-none');
@@ -116,9 +132,20 @@ function editUser(name)
     }
 }
 
+
+// delete user 
+
 function deleteUser(name)
 {
     usersArray = usersArray.filter((user) => user.name !== name);
     localStorage.setItem('users',JSON.stringify(usersArray));
     showData();
 }
+
+function calculateAge(data)
+{
+    let abc = data
+    console.log(abc.bdate);
+}
+
+
