@@ -32,19 +32,22 @@
             </div>
           </nav>
     </div>
-    <div id="name" class="text-center name">
+    <div id="username" class="text-center name">
 
     </div>
     <div class="row">
         <div class="col col-md-12 mt-2 maindiv">
             <h5>Add User</h5>
-            <div>
+            <div class="col col-md-12">
                 <form action="#" class="formdiv">&nbsp;
                     <input type="text" name="name" id="name" placeholder="Name" required> &nbsp; &nbsp; &nbsp;
                     <input type="email" name="email" id="email"  placeholder="Email" required> &nbsp; &nbsp; &nbsp;
                     <input type="password" name="password" id="password" placeholder="Password" required> &nbsp; &nbsp; &nbsp;
-                    <input type="date" name="bdate" id="bdate" placeholder="Birth Date" required> &nbsp; &nbsp; &nbsp;
-                    <input type="button" name="adduser" id="adduser" value="Add User" class="btn btn-success btn-md">
+                    <input type="date" name="bdate" id="bdate" placeholder="Birth Date" required> &nbsp; &nbsp; &nbsp; <br>
+                    <div class="ml-4 mt-2 mb-2">
+                        <input type="button" name="adduser" id="adduser" value="Add" class="btn btn-success btn-sm">
+                        <input type="button" name="updateuser" id="updateuser" value="Update" class="btn btn-info btn-sm mr-2 d-none">
+                    </div>
                 </form>
             </div>
         </div>
