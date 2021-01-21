@@ -1,7 +1,7 @@
 //its is for login session detail show
-
-let username = localStorage.getItem('logindetail');
-document.getElementById('username').textContent = "Welcome, "+ username;
+let username = JSON.parse(sessionStorage.getItem('loginsession'));
+console.log(username);
+document.getElementById('name').textContent = "Welcome, "+ username.name;
 
 let usersArray = [];
 //
@@ -15,25 +15,29 @@ showData();
 
 // Add user 
 
-
+class User
+{
+    constructor(name,email,password,bdate)
+    {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.bdate = bdate;
+    }
+}
 
 function addUserData()
 {
     let name = document.getElementById('name').value;
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
-    let birthdate = document.getElementById('bdate').value;
+    let bdate = document.getElementById('bdate').value;
 
     console.log(name);
 
-    if(name !== '' && email !== '' && password !== '' && birthdate !== '')
+    if(name !== '' && email !== '' && password !== '' && bdate !== '')
     {
-        let userObj = new Object();
-        userObj.name = name;
-        userObj.email = email;
-        userObj.password = password;
-        userObj.bdate = birthdate;
-        usersArray.push(userObj);
+        usersArray.push(new User(name,email,password,bdate));
         localStorage.setItem('users',JSON.stringify(usersArray));
     }
     else
@@ -46,6 +50,27 @@ document.getElementById('adduser').addEventListener('click',()=>
 {
     addUserData();  
     showData();
+});
+
+document.getElementById('updateuser').addEventListener('click',() => 
+{
+    let newname = document.getElementById('name').value;
+    let oldname = document.getElementById('oldname').value;
+    let email = document.getElementById('email').value;
+    let password = document.getElementById('password').value;
+    let bdate = document.getElementById('bdate').value;
+
+    let editData = JSON.parse(localStorage.getItem('users'));
+
+    if(editData)
+    {
+        usersArray = editData;
+    }
+
+    let userIndex = usersArray.findIndex(user => user.name === oldname);
+    usersArray[userIndex] = new User(newname,email,password,bdate);
+    localStorage.setItem('users',JSON.stringify(usersArray));
+    window.location.reload();
 });
 
 function showData()
@@ -81,10 +106,11 @@ function editUser(name)
         {
             if(data.name === name)
             {
-                data.name = document.getElementById('name').value = data.name;
-                data.email = document.getElementById('email').value = data.email;
-                data.password = document.getElementById('password').value = data.password;
-                data.bdate = document.getElementById('bdate').value = data.bdate;
+                document.getElementById('name').value = data.name;
+                document.getElementById('oldname').value = data.name;
+                document.getElementById('email').value = data.email;
+                document.getElementById('password').value = data.password;
+                document.getElementById('bdate').value = data.bdate;
             }
         }
     }

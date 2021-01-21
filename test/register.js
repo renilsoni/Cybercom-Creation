@@ -46,6 +46,7 @@ else
         {
             alert('Please Fill All Details !!');
         }
+        document.getElementById('register').disabled = true;
     });
 }
 
