@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Register Page</title>
+</head>
+<body>
+    <div id="login">
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div class="login-box">
+                    <div class="col-md-12">
+                        <form id="login-form" class="form" action="" method="post">
+                            <h3 class="text-center">Register</h3>
+                            <div class="form-group">
+                                <label for="name">Name :</label><br>
+                                <input type="text" name="name" id="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="username">Email :</label><br>
+                                <input type="email" name="email" id="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label><br>
+                                <input type="password" name="password" id="password" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmpassword">Confirm Password:</label><br>
+                                <input type="password" name="confirmpassword" id="confirmpassword" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">City :</label><br>
+                                <select name="city" id="city" class="form-control" required>
+                                    <option value="" selected>Select City</option>
+                                    <option value="Ahmedabad">Ahmedabad</option>
+                                    <option value="Mumbai">Mumbai</option>
+                                    <option value="Patan">Patan</option>
+                                    <option value="Udaipur">Udaipur</option>
+                                    <option value="Nathdwara">Nathdwara</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">State :</label><br>
+                                <select name="state" id="state" class="form-control" required>
+                                    <option value="" selected>Select State</option>
+                                    <option value="Guajarat">Guajarat</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                    <option value="Maharastra">Maharastra</option>
+                                </select>
+                            </div>
+                            <div class="form-group" align='center'>
+                                <input type="button" id="register" name="register" class="btn btn-success btn-md" value="Register">
+                                <input type="button" id="loginbtn" name="loginbtn" class="btn btn-info btn-md" value="Login">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="register.js"></script>
+</html>
