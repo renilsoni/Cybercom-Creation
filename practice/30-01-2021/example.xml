@@ -1,0 +1,26 @@
+<students>
+    <student>
+        <name>Renil</name>
+        <age>23</age>
+        <detail>
+            <city>Patan</city>
+            <mno>8200385941</mno>
+        </detail>
+    </student>
+    <student>
+        <name>Vaibhav</name>
+        <age>22</age>
+        <detail>
+            <city>Deesa</city>
+            <mno>9558413998</mno>
+        </detail>
+    </student>
+    <student>
+        <name>Rajan</name>
+        <age>21</age>
+        <detail>
+            <city>Thara</city>
+            <mno>9998423736</mno>
+        </detail>
+    </student>
+</students>
