@@ -14,18 +14,11 @@ function validateform() {
 
     var flag = true;
 
-    if(name == '') {
-        var nameerror = document.getElementById('nameerror');
-        nameerror.innerHTML = "Name is Required !!";
-        nameerror.classList.add('error');
+    if(!checkname(name)) {
         flag = false;
     }
-    if (password == '') {
-        var passworderror = document.getElementById('passworderror');
-        passworderror.innerHTML = "Password is Required !!";
-        passworderror.classList.add('error');
+    if (!checkpwd(password)) {
         flag = false;
-
     }
     if (address == '') {
         var addresserror = document.getElementById('addresserror');
@@ -55,17 +48,15 @@ function validateform() {
         flag = false;
 
     }
-    if (file == '') {
-        var fileerror = document.getElementById('fileerror');
-        fileerror.innerHTML = "File is Required !!";
-        fileerror.classList.add('error');
+    if (!checkfile(file)) {
         flag = false;
-
     }
     //alert (name + " " + password + " " + address + " " + game  + " " + age + " " + file );
     return flag;
 
 }
+
+
 
 
 

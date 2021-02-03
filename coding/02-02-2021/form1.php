@@ -110,7 +110,7 @@ if (isset($_SESSION['msg']) && !empty($_SESSION['msg'])) {
                 <td>Select Age : </td>
                 <td>
                     <select name="age" id="age">
-                        <option value="" selected>Select Age</option>
+                        <option value="" selected disabled>Select Age</option>
                         <option value="18">18</option>
                         <option value="19">19</option>
                         <option value="20">20</option>
@@ -142,10 +142,12 @@ if (isset($_SESSION['msg']) && !empty($_SESSION['msg'])) {
                 <td colspan="2"><input type="file" name="file" id="file"><span id="fileerror"></span></td>
             </tr>  
             <tr align="center">
-                <td  colspan="2"><input type="submit" name="submit" id="submit" value="Submit" onclick='return validateform()'> &nbsp;<input type="reset" name="clear" id="clear" value="Clear"></td>
+                <td  colspan="2"><input type="button" name="submit" id="submit" value="Submit" onclick='return validateform()'> &nbsp;<input type="reset" name="clear" id="clear" value="Clear"></td>
             </tr>  
         </table>
     </form>
 </body>
 <script src="form1.js"></script>
+<script src="function.js"></script>
+
 </html>
