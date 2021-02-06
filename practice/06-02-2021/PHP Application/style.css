@@ -1,0 +1,16 @@
+.navbar-nav 
+{ 
+    margin-left: auto; 
+}
+.main
+{
+    padding: 5%;
+}
+.contact
+{
+    padding: 5%;
+}
+.error
+{
+    color: red;
+}
